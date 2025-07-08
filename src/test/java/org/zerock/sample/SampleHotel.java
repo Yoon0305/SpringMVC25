@@ -19,6 +19,7 @@ public class SampleHotel {
 	// 생성자 주입은 lombok이 알아서 parameter를 만들어서 줌.
 	// 생성자 주입의 경우 객체 생성 시 의존성 주입이 필요하므로 좀 더 엄격하게 의존성 주입을 체크함.
 	// Setter 주입은 값을 저장할때 자동으로 객체를 생성해 줌. @Setter(onMethod_ = @AutoWired)
+	
 	@NonNull
 	private Chef chef;
 	
