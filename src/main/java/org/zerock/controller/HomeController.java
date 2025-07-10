@@ -22,7 +22,7 @@ public class HomeController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/", method = RequestMethod.GET) //http://192.168.111.104:80/controller/
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
 		
@@ -32,8 +32,10 @@ public class HomeController {
 		String formattedDate = dateFormat.format(date);
 		
 		model.addAttribute("serverTime", formattedDate );
+		// Spring은 back 에서 만든 값을 model에 담아서 보낸다. (model = dto)
 		
-		return "home";
+		return "home"; //servlet-context.xml에서 반응을 한다.
+		// /WEB-INF/views/home.jsp 에서 반응
 	}
 	
 }
