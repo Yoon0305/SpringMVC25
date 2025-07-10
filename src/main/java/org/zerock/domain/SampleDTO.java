@@ -2,16 +2,15 @@ package org.zerock.domain;
 
 import lombok.Data;
 
-@Data // lombok manage DTO
+@Data // lombok이 DTO를 관리한다.
 public class SampleDTO {
 	
-	String name;
-	int age;
-
-	// JAVA BEANS
-	// 1. Set Field as private
-	// 2. need basic Constructor
-	// 3. using Getter/Setter
-	// 4. using lombok for automatic generation of Getter/Setters.
+	// 자바빈즈 규약
+	// 1. 필드는 private
+	// 2. 생성자는 기본생성자 필수
+	// 3. 게터/세터를 사용
+	// lombok을 이용하면 자동으로 생성된다.
 	
+	private String name;
+	private int age;
 }
