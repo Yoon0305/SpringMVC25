@@ -2,8 +2,10 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
-		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 		<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
@@ -36,4 +38,9 @@
 
 	<!-- sql문이 들어 있는 매핑용 인터페이스나 xml를 검색하는 용도 -->
 	<mybatis-spring:scan base-package="org.mbc.mapper"/>
+	
+	<!-- 스프링이 관여하는 Service 계층을 명시하자. (필수) -> 아이콘에 S가 붙어서 spring control을 받는것을 확인할 수 있음 --> 
+	
+	<context:component-scan base-package="org.mbc.service"></context:component-scan>
+	
 </beans>
