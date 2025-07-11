@@ -22,7 +22,7 @@
 	</beans:bean>
 	
 	<context:component-scan base-package="org.mbc.controller" />
-	<!-- controller를 spring이 관여하도록 context scan path 설정  -->
+	<!-- 컨트롤러를 스프링이 관여하도록 설정 변경 -->
 	
 	
 	

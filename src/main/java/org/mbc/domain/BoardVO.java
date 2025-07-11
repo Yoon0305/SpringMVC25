@@ -4,18 +4,16 @@ import java.util.Date;
 
 import lombok.Data;
 
-@Data // 생성자, getter/setter, toString 등 담당
+@Data // import lombok.Data; (생성자, 게터/세터/ toString 등... )
 public class BoardVO {
-	
-	//객체용 VO는 읽기전용 속성이 강하게 만드는 객체(getter위주로 셋팅)
-	//dto 는 getter/setter 모두 가지고 활용하는 객체
+	// 객체용으로 vo는 읽기전용 속성이 강하게 만드는 객체(getter위주로 셋팅)
+	// dto는 게터/세터 모두 가지고 활용하는 객체
 	
 	private Long bno;
 	private String title;
 	private String content;
-	private String writer;
-	private Date regDate;
-	private Date updateDate;
-	
+	private String writer ;
+	private Date regDate ;  // import java.util.Date;
+	private Date updateDate ;
 	
 }
